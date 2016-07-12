@@ -1,0 +1,39 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module phfit2 ! in 
+    interface  ! in :phfit2
+        subroutine phfit2(nz,ne,is,e,s) ! in :phfit2:phfit2.f
+            integer :: nz
+            integer :: ne
+            integer :: is
+            real :: e
+            real intent(out) :: s
+            real dimension(7,30,30) :: ph2
+            real dimension(6,30,30,7) :: ph1
+            integer dimension(30) :: ntot
+            integer dimension(7) :: l
+            integer dimension(30) :: ninn
+            common /ph2/ ph2
+            common /ph1/ ph1
+            common /ntot/ ntot
+            common /l/ l
+            common /ninn/ ninn
+        end subroutine phfit2
+        block data bdata ! in :phfit2:phfit2.f
+            real dimension(7,30,30) :: ph2
+            real dimension(6,30,30,7) :: ph1
+            integer dimension(30) :: ntot
+            integer dimension(7) :: l
+            integer dimension(30) :: ninn
+            common /ph2/ ph2
+            common /ph1/ ph1
+            common /ntot/ ntot
+            common /l/ l
+            common /ninn/ ninn
+        end block data bdata
+    end interface 
+end python module phfit2
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/
