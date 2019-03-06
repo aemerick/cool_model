@@ -96,6 +96,7 @@ for i in np.arange(nz):
         hi_avg_crs[i] = 0.0
     else:
         hi_avg_crs[i] = num / denom
+    print 'HI', num, denom
 
 #
 # HI : integrate from HI to HeI
@@ -108,6 +109,7 @@ for i in np.arange(nz):
         hi_avg_crs_2[i] = 0.0
     else:
         hi_avg_crs_2[i] = num / denom
+    print 'HI 2', num, denom
 #
 # HeI : integrate from HeI to HeII
 #
@@ -121,7 +123,7 @@ for i in np.arange(nz):
         hei_avg_crs[i] = 0.0
     else:
         hei_avg_crs[i] = num / denom
-
+    print 'HeI', num, denom
 #
 # HeII : integrate from HeII to last frequency bin
 #
